@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSC426 Portal | Sign In</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="card">
+      <div class="card__top">
+        <span class="logo">CSC426 <span>Portal</span></span>
+      </div>
+
+      <div class="card__body">
+        <h1>Sign in</h1>
+        <p class="lead">Enter your details to access the dashboard.</p>
+
+        <div id="alert" class="alert" role="alert" aria-live="polite" hidden></div>
+
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="username" placeholder="e.g. admin" required />
+          <small class="error" data-error-for="username"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password" required />
+            <button type="button" id="togglePassword" class="toggle" aria-label="Show password">Show</button>
+          </div>
+          <small class="error" data-error-for="password"></small>
+        </div>
+
+        <button type="button" id="loginBtn" class="btn btn--primary">Log in</button>
+        <button type="button" id="resetBtn" class="btn btn--ghost">Reset</button>
+
+        <p class="hint">Demo credentials: <strong>admin</strong> / <strong>password123</strong></p>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
